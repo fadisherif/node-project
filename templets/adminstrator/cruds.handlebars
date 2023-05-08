@@ -1,0 +1,92 @@
+<div style="padding-top: 2.5cm;">
+<h1 class="container">Departments</h1>
+<table class="table">
+    <tr>
+        <th>name</th>
+        <th>code</th>
+    </tr>
+    {{#each department}}
+    <tr>
+    <th>{{name}}</th>
+    <th>{{code}}</th>
+    <th><a href="#">Edit</a> | <a href="#">Delete</a></th>
+    </tr>
+
+    {{/each}}
+    <tr>
+        <th>   </th>
+        <th><a href="#">ADD New Department</a></th>
+    </tr>
+</table>
+</div>
+<br>
+<!-- table 2 -->
+<div>
+<h1 class="container">Subjects</h1>
+<table class="table">
+    <tr>
+        <th>name</th>
+        <th>code</th>
+        <th>department</th>
+    </tr>
+    {{#each subject}}
+    <tr>
+    <th>{{name}}</th>
+    <th>{{code}}</th>
+    <th>{{department}}</th>
+    <th><a href="#">Edit</a> | <a href="#">Delete</a></th>
+    </tr>
+
+    {{/each}}
+    <tr>
+        <th>   </th>
+        <th><a href="/subjects/create">ADD New Subjects</a></th>
+    </tr>
+</table>
+</div>
+<br>
+<!-- table 3 -->
+<div>
+<h1 class="container">Students</h1>
+<table class="table">
+    <tr>
+        <th>name</th>
+        <th>id</th>
+    </tr>
+    {{#each student}}
+    <tr>
+    <th>{{name}}</th>
+    <th>{{id}}</th>
+    <th><a href="#">Edit</a> | <a href="#">Delete</a></th>
+    </tr>
+
+    {{/each}}
+    <tr>
+        <th>   </th>
+        <th><a href="#">ADD New Student</a></th>
+    </tr>
+</table>
+</div>
+<br>
+<!-- table 4 -->
+<div>
+<h1 class="container">Doctors</h1>
+<table class="table">
+    <tr>
+        <th>name</th>
+        <th>Id</th>
+    </tr>
+    {{#each doctor}}
+    <tr>
+    <th>{{name}}</th>
+    <th>{{id}}</th>
+    <th><a href="#">Edit</a> | <a href="#">Delete</a></th>
+    </tr>
+
+    {{/each}}
+    <tr>
+        <th>   </th>
+        <th><a href="#">ADD New Department</a></th>
+    </tr>
+</table>
+</div>
