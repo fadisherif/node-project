@@ -11,4 +11,4 @@ const doctors = new Schema({
     }
 }, {timestamps:true})
 
-export default model('doctors', doctors);
+export default model('doctor', doctors);

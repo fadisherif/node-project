@@ -1,5 +1,4 @@
 import { Schema, model } from "mongoose";
-import department from "../models/departments.js"
 
 const subjects = new Schema({
     name: {
@@ -15,8 +14,9 @@ const subjects = new Schema({
         required: false
     },
     department: {
-        type: String,
-        required: true
+        type: Schema.Types.ObjectId,
+        required: false,
+        ref: 'departments'
     }
     
 }, {timestamps:true})
