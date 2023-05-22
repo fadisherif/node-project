@@ -1,6 +1,5 @@
 import { Router } from "express";
-import subjects from '../models/departments.js';
-import { create, store } from "../controller/subject.js";
+import { create, show, store, update ,deleteone} from "../controller/subject.js";
 
 const router = new Router();
 
@@ -8,11 +7,9 @@ const router = new Router();
 router.get('/create',create)
 router.post('/',store)
 
-router.get('/delete',(req,res) => {
-    res.render('subjects/delete')
-})
 
-router.get('/update',(req,res) => {
-    res.render('subjects/update')
-})
+
+router.get('/show/:_id',show)
+router.put("/",update)
+router.delete("/deleteone/:id",deleteone);
 export default router;

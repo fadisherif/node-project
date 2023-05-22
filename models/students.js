@@ -1,13 +1,27 @@
-import { Schema, model } from "mongoose";
+import { Schema, SchemaType, model } from "mongoose";
+import departments from "../models/departments.js"
 
 const students = new Schema({
     name: {
         type: String,
         required: true
     },
-    id: {
+    email: {
         type: String,
-        required: true
+        require: true
+    },
+    password: {
+        type: String,
+        require: true
+    },
+    department: {
+        type: Schema.Types.ObjectId,
+        require: false,
+        ref: 'departments'
+    },
+    academicNum: {
+        type:String,
+        require:true,
     }
 }, {timestamps:true})
 

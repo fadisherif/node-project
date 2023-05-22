@@ -1,5 +1,19 @@
-<h1>update dep</h1>
+<h1>Update department</h1>
 
-<h1>{{solodep.name}}</h1>
+<form action="/department/{{departments._id}}?_method=PUT" method="POST" >
+<div>
+    <label>Name</label>
+    <input type="text" class="form-control" name="name" value="{{solodep.name}}">
+</div>
 
-<h1>{{solodep.code}}</h1>
+<div>
+    <label>code</label>
+    <input type="text" class="form-control" name="code" value="{{solodep.code}}">
+</div>
+
+<div>
+    <button class="btn btn-success" type="submit">save</button>
+</div>
+
+</form>
+

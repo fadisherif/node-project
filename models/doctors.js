@@ -1,14 +1,24 @@
 import { Schema, model } from "mongoose";
+import departments from "../models/departments.js"
 
 const doctors = new Schema({
     name: {
         type: String,
         required: true
     },
-    id: {
+    email: {
         type: String,
-        required: true
+        require: true
+    },
+    password: {
+        type: String,
+        require: true
+    },
+    department: {
+        type: Schema.Types.ObjectId,
+        require: false,
+        ref: 'departments'
     }
 }, {timestamps:true})
 
-export default model('doctor', doctors);
+export default model('doctors', doctors);

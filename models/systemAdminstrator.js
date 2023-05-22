@@ -6,8 +6,12 @@ const systemAdminstrator = new Schema({
         type: String,
         required: true
     },
-    id: {
-        type: Int32,
-        required: true
+    email: {
+        type: String,
+        require: true
+    },
+    password: {
+        type: String,
+        require: true
     }
 })

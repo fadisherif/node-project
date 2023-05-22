@@ -21,3 +21,18 @@ export const show= async (req,res) => {
     console.log(solodep);
     res.render('departments/update' , {solodep})
 }
+
+export const update= async (req,res) =>{
+    const { name , code } = req.body
+    const {_id} = req.params;
+    await departments.findByIdAndUpdate(_id , {$set:{name , code}});
+    res.redirect('/adminstrator/cruds')
+    //console.log(department)
+
+}
+
+export const deleteone=async (req,res) =>{
+    const {_id}=req.params
+    await departments.findByIdAndDelete(_id)
+    return res.redirect('/adminstrator/cruds')   
+}

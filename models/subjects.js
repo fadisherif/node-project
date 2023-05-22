@@ -1,24 +1,30 @@
 import { Schema, model } from "mongoose";
+import departments from "../models/departments.js";
+import doctors from "../models/doctors.js"
 
 const subjects = new Schema({
     name: {
         type: String,
-        required: true
+        require: true
     },
     code: {
         type: String,
-        required: false
+        require: false
     },
     pdf: {
         type: String,
-        required: false
+        require: false
     },
     department: {
         type: Schema.Types.ObjectId,
-        required: false,
+        require: false,
         ref: 'departments'
+    },
+    doctors: {
+        type:Schema.Types.ObjectId,
+        require:false,
+        ref: 'deoctors'
     }
-    
 }, {timestamps:true})
 
 export default model('subjects', subjects);

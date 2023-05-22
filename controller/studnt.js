@@ -1,25 +1,25 @@
-import doctors from '../models/doctors.js'
+import students from '../models/students.js'
 import departments from '../models/departments.js';
 
 export const create =async (req,res) => {
     const department = await departments.find().lean()
-   res.render('doctors/create' , {department})
+   res.render('students/create' , {department})
 };
 
 export const store = async (req,res) => {
-    const {name , email , password , department }=req.body
-    await doctors.create({
+    const {name , email , password , department , academicNum}=req.body
+    await students.create({
         name,
         email,
         password,
-        department
+        department,
+        academicNum
     })
-    console.log(department)
     res.redirect('/adminstrator/cruds')
 };
 
 export const deleteone=async (req,res) =>{
     const {_id}=req.params
-    await doctors.findByIdAndDelete(_id)
+    await students.findByIdAndDelete(_id)
     return res.redirect('/adminstrator/cruds')   
 }
