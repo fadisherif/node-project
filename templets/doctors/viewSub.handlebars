@@ -1,0 +1,24 @@
+<div>
+<h1 class="container">Subjects</h1>
+<table class="table">
+    <tr>
+        <th>name</th>
+        <th>code</th>
+        <th>department</th>
+        <th>Doctor</th>
+    </tr>
+    {{#each subject}}
+    <tr>
+    <th>{{name}}</th>
+    <th>{{code}}</th>
+    <th>{{department.name}}</th>
+    <th>{{doctor.name}}</th>
+    {{/each}}
+
+    <tr>
+        <th>   </th>
+        <th>   </th>
+        <th><a href="/subjects/create">ADD New Subjects</a></th>
+    </tr>
+</table>
+</div>

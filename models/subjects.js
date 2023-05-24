@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
-import departments from "../models/departments.js";
-import doctors from "../models/doctors.js"
+import departments from "./departments.js";
+import doctors from "./doctors.js";
 
 const subjects = new Schema({
     name: {
@@ -15,15 +15,15 @@ const subjects = new Schema({
         type: String,
         require: false
     },
-    department: {
+    departments: {
         type: Schema.Types.ObjectId,
         require: false,
         ref: 'departments'
     },
     doctors: {
-        type:Schema.Types.ObjectId,
-        require:false,
-        ref: 'deoctors'
+        type: Schema.Types.ObjectId,
+        require: false,
+        ref: 'doctors'
     }
 }, {timestamps:true})
 

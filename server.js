@@ -17,6 +17,8 @@ import doctors from './models/doctors.js';
 import students from './models/students.js';
 import subjects from './models/subjects.js';
 import methodOverride from 'method-override'
+import cookieParser from 'cookie-parser';
+import {authentication} from './middleware/authentication.js'
 
 
 app.engine('handlebars', engine());
@@ -25,14 +27,15 @@ app.set('views', './templets');
 
 app.use(methodOverride('_method'))
 
+
 app.get('/', (req, res) => {
     res.render('other/first');
 })
 
 //app.use(express.static('public'));
+app.use(cookieParser())
 
-
-app.use('/subjects', subjectsRouter);
+app.use('/subjects',authentication, subjectsRouter);
 app.use('/adminstrator', adminRouter);
 app.use('/department', departmentRouter)
 app.use('/doctor' , doctorRouter)

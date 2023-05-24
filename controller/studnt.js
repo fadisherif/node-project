@@ -15,6 +15,7 @@ export const store = async (req,res) => {
         department,
         academicNum
     })
+    console.log(department)
     res.redirect('/adminstrator/cruds')
 };
 

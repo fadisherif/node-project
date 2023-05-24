@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { create, show, store, update ,deleteone} from "../controller/subject.js";
+import { create, show, store, update } from "../controller/subject.js";
 
 const router = new Router();
 
@@ -11,5 +11,5 @@ router.post('/',store)
 
 router.get('/show/:_id',show)
 router.put("/",update)
-router.delete("/deleteone/:id",deleteone);
+// router.delete("/deleteone/:id",deleteone);
 export default router;

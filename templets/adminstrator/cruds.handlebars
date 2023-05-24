@@ -9,7 +9,7 @@
     <tr>
     <th>{{name}}</th>
     <th>{{code}}</th>
-    <th><a href="/department/show/{{_id}}">Edit</a> | <form action="/department/{{_id}}?_method=DELETE" method="post"> <button type="submit">Delete</button></th></form>
+    <th><a href="/department/{{_id}}">Edit</a> | <form action="/department/{{_id}}?_method=DELETE" method="post"> <button type="submit">Delete</button></th></form>
     </tr>
 
     {{/each}}
@@ -34,8 +34,8 @@
     <tr>
     <th>{{name}}</th>
     <th>{{code}}</th>
-    <th>{{department}}</th>
-    <th>{{doctor}}</th>
+    <th>{{department.name}}</th>
+    <th>{{doctor.name}}</th>
     
     <th><a href="/subjects/show/{{_id}}">Edit</a> | <a href="/subjects/deleteone/{{_id}}">Delete</a></th>
     </tr>
@@ -66,13 +66,15 @@
     <th>{{email}}</th>
     <th>{{password}}</th>
     <th>{{academicNum}}</th>
-    <th>{{department}}</th>
+    <th>{{department.name}}</th>
     <th><a href="#">Edit</a> | <a href="#">Delete</a></th>
     </tr>
 
     {{/each}}
     <tr>
         <th>   </th>
+        <th>   </th>
+         <th>   </th>
         <th><a href="/student/create">ADD New Student</a></th>
     </tr>
 </table>
@@ -93,12 +95,13 @@
     <th>{{name}}</th>
     <th>{{email}}</th>
     <th>{{password}}</th>
-    <th>{{department}}</th>
+    <th>{{department.name}}</th>
     <th><a href="#">Edit</a> | <a href="#">Delete</a></th>
     </tr>
 
     {{/each}}
     <tr>
+         <th>   </th>
         <th>   </th>
         <th><a href="/doctor/create">ADD New Doctor</a></th>
     </tr>

@@ -17,6 +17,7 @@ export const store = async (req,res) => {
         department,
         doctor
     })
+    console.log(doctor.name)
     res.redirect('/adminstrator/cruds')
 };
 
